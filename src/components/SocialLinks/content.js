@@ -1,6 +1,6 @@
 const links = [
     {
-        label: 'Github',
+        label: 'GithubAlt',
         url: 'https://github.com/andreMCD',
     },
     {
@@ -12,13 +12,9 @@ const links = [
         url: 'https://www.instagram.com/andredemcd/',
     },
     {
-        label: 'Facebook',
-        url: '',
-    },
-    {
         label: 'Twitter',
         url: 'https://twitter.com/andredeMCD',
-    }
+    },
 ]
 
 export default links
