@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Avatar from '../Avatar';
+import SocialLinks from '../SocialLinks/index'
 
 // Import all styles from alias S.
 import * as S from './styled';
@@ -31,6 +32,7 @@ const Profile = () => {
         <Avatar />
         <S.ProfileTitle>{title}</S.ProfileTitle>
         <S.ProfileSubTitle>{position}</S.ProfileSubTitle>
+        <SocialLinks />
         <S.ProfileDescription>{description}</S.ProfileDescription>
     </S.ProfileWrapper>
     )
