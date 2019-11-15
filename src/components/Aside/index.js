@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react"
 
-import * as S from './styled'
+import MenuBar from "../MenuBar"
+
+import * as S from "./styled"
 
 const Aside = () => (
-    <S.AsideWrapper>
-        
-    </S.AsideWrapper>
-);
+  <S.AsideWrapper>
+    <MenuBar />
+  </S.AsideWrapper>
+)
 
-export default Aside;
+export default Aside
