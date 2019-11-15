@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react"
 
-import * as S from './styled'
+import LogoIcon from "../LogoIcon"
+import MenuLinks from "../MenuLinks"
+
+import * as S from "./styled"
 
 const Header = () => (
-    <S.HeaderWrapper>
-        
-    </S.HeaderWrapper>
-);
+  <S.HeaderWrapper>
+    <LogoIcon />
+    <MenuLinks />
+  </S.HeaderWrapper>
+)
 
-export default Header;
+export default Header
