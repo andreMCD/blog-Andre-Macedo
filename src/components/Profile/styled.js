@@ -22,8 +22,9 @@ export const ProfileSubTitle = styled.h2`
     margin-bottom: .6rem;
 `
 
-export const ProfileDescription = styled.p`
+export const ProfileDescription = styled.i`
     font-size: 1.2rem;
+    font-style: italic;
     color: #393e46;
 
 `
