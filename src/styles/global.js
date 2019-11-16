@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
     /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -60,6 +60,9 @@ img {
     display: block;
     width: 100%;
     height: auto;
+}
+html, body {
+	position: relative;
 }
 `
 
