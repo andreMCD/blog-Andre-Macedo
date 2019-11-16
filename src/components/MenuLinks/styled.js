@@ -4,14 +4,13 @@ import { Link } from "gatsby"
 export const MenuLinksWrapper = styled.nav`
   display: flex;
   justify-content: center;
+  width: 100px;
 `
 
 export const MenuLinksList = styled.ul`
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
+  width: 100%;
   font-size: 1.5rem;
   font-weight: 500;
 
@@ -27,12 +26,13 @@ export const MenuLinksList = styled.ul`
 `
 
 export const MenuLinksItem = styled.li`
-  margin: 40px 0;
+  margin: 0 0 80px 0;
   letter-spacing: 1px;
   transform: rotate(-90deg);
 
   :last-child {
-    margin: 0 0 20px 0;
+    margin: 0 0 60px 0;
+    z-index: 1;
   }
 
   .active {

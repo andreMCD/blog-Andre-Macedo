@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const HeaderWrapper = styled.header`
-  width: calc(100% - 80%);
+  width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
