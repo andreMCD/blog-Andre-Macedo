@@ -1,12 +1,15 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const LayoutContainer = styled.main`
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
+  display: grid;
+  grid-template:
+    "head main aside" 100vh
+    / auto 1fr 50px;
 `
 
 export const LayoutContent = styled.section`
-    display: flex;
-    width: 100%;
+  grid-area: main;
+  width: 100%;
+
+  overflow: auto;
 `
