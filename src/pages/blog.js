@@ -1,22 +1,58 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import PostItem from "../components/PostItem"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const BlogPage = () => (
-  <Layout>
-    <SEO title="blog" />
-    <PostItem
-      border="#00f911"
-      slug="/about/"
-      title="Título do Post"
-      date="30 de Julho de 2019"
-      timeToRead="7"
-      description="Essa é uma pequena descrição do post."
-    />
-  </Layout>
-)
+const BlogPage = () => {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query PostList {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              border
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `)
+
+  const postList = allMarkdownRemark.edges
+
+  return (
+    <Layout>
+      <SEO title="blog" />
+      {postList.map(
+        ({
+          node: {
+            frontmatter: { border, title, date, description },
+            timeToRead,
+            fields: { slug }
+          },
+        }) => (
+          <PostItem
+            border={border}
+            slug={slug}
+            title={title}
+            date={date}
+            timeToRead={timeToRead}
+            description={description}
+          />
+        )
+      )}
+    </Layout>
+  )
+}
 
 export default BlogPage
